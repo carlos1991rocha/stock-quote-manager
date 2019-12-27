@@ -1,9 +1,7 @@
 package com.carlos1991rocha.stockquotemanager;
 
 import java.time.LocalDate;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -19,7 +17,6 @@ public class Quote{
     @ManyToOne
     @JoinColumn(name="stock_id", nullable=false)
     private Stock stock;
-
 
     public String getId() {
         return id;
@@ -44,9 +41,4 @@ public class Quote{
     public void setValue(float value) {
         this.value = value;
     }
-    
-    
-     
-
-
 }
