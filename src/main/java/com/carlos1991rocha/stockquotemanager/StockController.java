@@ -31,6 +31,10 @@ public class StockController{
     public @ResponseBody Stock create(@RequestBody final Stock stock){
         return stockRepository.save(stock);
     }
+    // @PostMapping()
+    // public @ResponseBody Quote create(@RequestBody final Quote quote){
+    //     return stockRepository.save((Iterable<Quote>) quote);
+    // }
     @GetMapping()
     public @ResponseBody Iterable <Stock> getAll(){
         return stockRepository.findAll();
